@@ -1,0 +1,191 @@
+body {
+  background: #383838;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+/* Estilos do menu de ação */
+.action-menu {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Adicionado */
+  top: 0; /* Adicionado */
+  left: 50%; /* Adicionado */
+  transform: translateX(-50%); /* Adicionado */
+}
+
+.action-menu input[type="text"] {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.action-menu select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 30px;
+  margin-right: 6px;
+}
+
+.action-menu .toggle-button {
+  width: 150px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.action-menu .toggle-button:hover {
+  background-color: #45a049;
+}
+
+.action-menu .toggle-button:focus {
+  outline: none;
+}
+
+/* Estilos dos Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* Estilos dos jogos */
+.game-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.game-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.game-unavailable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  color: #ffffff;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .action-menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-menu input[type="text"],
+  .action-menu select {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Estilos da paginação */
+.pagination {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; 
+  width: auto;
+  background-color: rgb(56, 56, 56); /* Adicione uma cor de fundo se desejar */
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Adicione uma sombra se desejar */
+}
+
+.page-number {
+  padding: 8px;
+  margin: 0 4px;
+  background: #f9f9f9;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #000000; 
+}
+
+.page-number:hover {
+  background: #ebebeb;
+}
+
+.page-number:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

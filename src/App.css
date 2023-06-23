@@ -27,10 +27,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Adicionado */
-  top: 0; /* Adicionado */
-  left: 50%; /* Adicionado */
-  transform: translateX(-50%); /* Adicionado */
+  position: fixed; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .action-menu input[type="text"] {
